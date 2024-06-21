@@ -1,3 +1,1 @@
-Hotel B,Jazmin,Mora Granados,1234567891,2024-06-29,2 personas
-Hotel Paraiso Verde,Isabella,Campos Mora,1234567891,2024-07-12,Hospedaje de 2 persona. Todo incluido
 Hotel Paraiso Verde,Isabella,Campos Mora,1234567891,2024-07-12,Hospedaje de 2 persona. Todo incluido
