@@ -1,0 +1,13 @@
+Basado en el arreglo $peliculasGeneros
+conteste las siguientes preguntas:
+i.Como se obtiene al valor El Padrino.
+Para obtener "El Padrino", accede a $peliculasGeneros[0]['pelicula'].
+
+ii.Como se obtiene al valor Titanic.
+Para obtener "Titanic", accede a $peliculasGeneros[3]['pelicula'].
+
+iii.Como se obtiene al valor 4.
+Para obtener 4, accede a $peliculasGeneros[3]['id'].
+
+Nota:recuerde usar posición/índice para acceder a cada elemento.
+
