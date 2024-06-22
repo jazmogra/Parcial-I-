@@ -6,6 +6,9 @@
 </head>
 <body>
 <?php
+
+define("ARCHIVO_RESERVACIONES", "reservaciones.txt");
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $hotel = trim($_POST['hotel']);
     $nombre = trim($_POST['nombre']);
@@ -31,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     // Guardar la reservación en un archivo plano
     $reservacion = "$hotel,$nombre,$apellido,$telefono,$fecha,$observaciones\n";
-    if (file_put_contents('reservaciones.txt', $reservacion, FILE_APPEND) === false) {
+    if (file_put_contents(ARCHIVO_RESERVACIONES, $reservacion, FILE_APPEND) === false) {
         die('Error al guardar la reservación.');
     }
     
@@ -39,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     echo '<h2>Reservaciones:</h2>';
     echo '<table border="1">';
     echo '<tr><th>Hotel</th><th>Nombre</th><th>Apellido</th><th>Teléfono</th><th>Fecha</th><th>Observaciones</th></tr>';
-    if ($file = fopen('reservaciones.txt', 'r')) {
+    if ($file = fopen(ARCHIVO_RESERVACIONES, 'r')) {
         while (($line = fgets($file)) !== false) {
             list($hotel, $nombre, $apellido, $telefono, $fecha, $observaciones) = explode(',', trim($line));
             echo '<tr>';
